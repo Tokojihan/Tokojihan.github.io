@@ -1,0 +1,140 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Tampilan umum */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Header */
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Home section */
+#home {
+    text-align: center;
+    padding: 2rem;
+}
+
+#home h2 {
+    font-size: 2rem;
+    color: #333;
+}
+
+#home p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Produk Section */
+#produk {
+    padding: 2rem;
+    background-color: #ffffff;
+}
+
+#produk h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.produk-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.produk {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    margin: 1rem;
+    text-align: center;
+    width: 30%;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.produk img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.produk h3 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.produk p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.tombol-beli {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.tombol-beli:hover {
+    background-color: #45a049;
+}
+
+/* Kontak Section */
+#kontak {
+    text-align: center;
+    padding: 2rem;
+    background-color: #fff;
+}
+
+#kontak h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+#kontak p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+}
