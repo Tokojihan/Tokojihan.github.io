@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Toko Jihan - Your go-to grocery store for quality food and essentials.">
-    <meta name="keywords" content="Toko Jihan, grocery store, online store, food, essentials">
-    <title>Toko Jihan - Online Grocery Store</title>
+    <meta name="description" content="Toko Sembako Online, belanja sembako online dengan mudah dan aman.">
+    <meta name="keywords" content="Toko Sembako, Belanja Online, Murah, Sembako">
+    <title>Toko Sembako - Belanja Mudah dan Hemat</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -14,73 +14,84 @@
     <header>
         <div class="header-container">
             <div class="logo">
-                <img src="logo.png" alt="Toko Jihan Logo" />
+                <img src="logo.png" alt="Logo Toko Sembako" />
             </div>
             <nav>
                 <ul class="desktop-nav">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Produk</a></li>
+                    <li><a href="#">Beranda</a></li>
                     <li><a href="#">Kategori</a></li>
-                    <li><a href="#maps">Lokasi</a></li>
+                    <li><a href="#">Promo</a></li>
+                    <li><a href="#">Kontak</a></li>
                 </ul>
-                <!-- Hamburger Menu -->
-                <div class="hamburger-menu" id="hamburger-menu">
-                    <i class="fas fa-bars"></i>
+                <div class="search-bar">
+                    <input type="text" placeholder="Cari produk..." />
+                    <button><i class="fas fa-search"></i></button>
                 </div>
-                <ul class="mobile-nav" id="mobile-nav">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Produk</a></li>
-                    <li><a href="#">Kategori</a></li>
-                    <li><a href="#maps">Lokasi</a></li>
-                </ul>
+                <div class="header-icons">
+                    <a href="#"><i class="fas fa-user"></i></a>
+                    <a href="#"><i class="fas fa-shopping-cart"></i></a>
+                </div>
             </nav>
-            <div class="header-icons">
-                <a href="#"><i class="fas fa-search"></i></a>
-                <a href="#"><i class="fas fa-user"></i></a>
-                <a href="#"><i class="fas fa-shopping-cart"></i></a>
-            </div>
         </div>
     </header>
 
-    <!-- Hero Slider -->
-    <section class="hero-slider">
-        <div class="slider">
-            <div class="slide" style="background-image: url('slide1.jpg');"></div>
-            <div class="slide" style="background-image: url('slide2.jpg');"></div>
-            <div class="slide" style="background-image: url('slide3.jpg');"></div>
+    <!-- Hero Banner -->
+    <section class="hero-banner">
+        <div class="banner-content">
+            <h1>Belanja Sembako dengan Mudah!</h1>
+            <p>Dapatkan produk sembako terbaik dengan harga terjangkau hanya di Toko Sembako.</p>
         </div>
     </section>
 
-    <!-- Categories -->
+    <!-- Kategori Produk -->
     <section class="categories">
-        <h2>Kategori Populer</h2>
+        <h2>Kategori Produk</h2>
         <div class="category-grid">
             <div class="category-item">
-                <img src="Beras.png" alt="Beras">
+                <img src="beras.jpg" alt="Beras">
                 <h3>Beras</h3>
             </div>
             <div class="category-item">
-                <img src="Gula-pasir.png" alt="Gula Pasir">
+                <img src="gula.jpg" alt="Gula Pasir">
                 <h3>Gula Pasir</h3>
             </div>
             <div class="category-item">
-                <img src="Minyak-Goreng.jpg" alt="Minyak Goreng">
+                <img src="minyak.jpg" alt="Minyak Goreng">
                 <h3>Minyak Goreng</h3>
             </div>
         </div>
     </section>
 
-    <!-- Google Maps -->
-    <section id="maps" class="maps-section">
-        <h2>Lokasi Toko Jihan</h2>
-        <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.256536309239!2d105.41986619999999!3d-5.5273675999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e40e1bd063a372f%3A0x447ce930eb7b00b4!2sToko%20Jihan!5e0!3m2!1sen!2sid!4v1696851256581!5m2!1sen!2sid"
-            width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <!-- Produk Populer -->
+    <section class="popular-products">
+        <h2>Produk Populer</h2>
+        <div class="product-grid">
+            <div class="product-item">
+                <img src="beras.jpg" alt="Beras" />
+                <h3>Beras Super 5kg</h3>
+                <p>Rp 50.000</p>
+                <button>Tambah ke Keranjang</button>
+            </div>
+            <div class="product-item">
+                <img src="gula.jpg" alt="Gula Pasir" />
+                <h3>Gula Pasir 1kg</h3>
+                <p>Rp 15.000</p>
+                <button>Tambah ke Keranjang</button>
+            </div>
+            <div class="product-item">
+                <img src="minyak.jpg" alt="Minyak Goreng" />
+                <h3>Minyak Goreng 1L</h3>
+                <p>Rp 20.000</p>
+                <button>Tambah ke Keranjang</button>
+            </div>
+        </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Toko Jihan. All rights reserved.</p>
+        <div class="footer-content">
+            <p>&copy; 2024 Toko Sembako - Semua hak dilindungi.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>

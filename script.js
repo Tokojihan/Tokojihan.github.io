@@ -1,7 +1,8 @@
-// JavaScript for hamburger menu toggle
-const hamburgerMenu = document.getElementById("hamburger-menu");
-const mobileNav = document.getElementById("mobile-nav");
+// Sederhana untuk menangani klik pada tombol "Tambah ke Keranjang"
+const addToCartButtons = document.querySelectorAll('.product-item button');
 
-hamburgerMenu.addEventListener("click", () => {
-    mobileNav.classList.toggle("mobile-nav-visible");
+addToCartButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        alert('Produk telah ditambahkan ke keranjang!');
+    });
 });
