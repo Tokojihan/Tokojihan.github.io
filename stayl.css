@@ -242,13 +242,4 @@ footer .social-links a {
     padding: 5px;
 }
 
-.image-row {
-    display: flex;
-    justify-content: space-between; /* Memberikan jarak antar gambar */
-    gap: 10px; /* Jarak antar gambar */
-}
-.image-row img {
-    width: 150px; /* Atur lebar gambar */
-    height: auto; /* Menjaga rasio gambar */
-    border-radius: 6px; /* Sudut melengkung opsional */
-}
+
