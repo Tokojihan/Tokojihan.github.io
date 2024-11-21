@@ -4,41 +4,51 @@ body {
     font-family: Arial, sans-serif;
 }
 
+/* Header */
 header {
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 20px;
-    background-color: #e84242;
+    background: #e84242;
+    padding: 10px 20px;
     color: white;
 }
 
-header .logo {
-    font-size: 24px;
-    font-weight: bold;
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-header nav ul {
+.logo img {
+    height: 50px;
+}
+
+nav ul {
     list-style: none;
     display: flex;
     margin: 0;
     padding: 0;
 }
 
-header nav ul li {
+nav ul li {
     margin: 0 15px;
 }
 
-header nav ul li a {
+nav ul li a {
     text-decoration: none;
     color: white;
     font-weight: bold;
 }
 
-/* Hero Section with Slider */
-.hero {
+.header-icons a {
+    margin: 0 10px;
+    color: white;
+    font-size: 20px;
+}
+
+/* Hero Slider */
+.hero-slider {
     position: relative;
-    height: 70vh;
     overflow: hidden;
+    height: 400px;
 }
 
 .slider {
@@ -52,69 +62,70 @@ header nav ul li a {
     height: 100%;
     background-size: cover;
     background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 40px;
-    font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
+/* Categories */
+.categories {
+    padding: 20px;
+    text-align: center;
+}
+
+.category-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.category-item {
+    text-align: center;
+    width: 150px;
+}
+
+.category-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Google Maps */
+.maps-section {
+    padding: 20px;
+    text-align: center;
+    background: #f9f9f9;
+}
+
+.maps-section h2 {
+    margin-bottom: 20px;
+    color: #e84242;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: white;
+    font-size: 14px;
+}
+
+/* Animasi Slider */
 @keyframes slide {
     0%, 33.33% { transform: translateX(0); }
     33.34%, 66.66% { transform: translateX(-100%); }
     66.67%, 100% { transform: translateX(-200%); }
 }
 
-/* Features Section */
-.features {
-    display: flex;
-    justify-content: space-around;
-    padding: 50px 20px;
-    background-color: #f4f4f4;
-    text-align: center;
-}
-
-.feature {
-    flex: 1;
-    max-width: 300px;
-    margin: 0 10px;
-    animation: fadeIn 2s;
-}
-
-.feature i {
-    font-size: 40px;
-    color: #e84242;
-    margin-bottom: 15px;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: white;
-    font-size: 14px;
-}
-
-/* Responsive Design */
+/* Responsiveness */
 @media (max-width: 768px) {
-    header nav ul {
+    nav ul {
         flex-direction: column;
         display: none;
     }
 
-    header nav ul.active {
+    nav ul.active {
         display: flex;
     }
 
-    .features {
+    .category-grid {
         flex-direction: column;
     }
 }
