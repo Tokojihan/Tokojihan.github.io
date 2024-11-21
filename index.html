@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toko Jihan</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Toko Sembako</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <!-- Header -->
-    <header>
-        <div class="container header-container">
+    <header class="navbar">
+        <div class="container">
             <div class="logo">
                 <h1>Toko Jihan</h1>
             </div>
@@ -19,48 +19,51 @@
                     <li><a href="#">Beranda</a></li>
                     <li><a href="#">Produk</a></li>
                     <li><a href="#">Kategori</a></li>
-                    <li><a href="#lokasi">Lokasi</a></li>
-                    <li><a href="#kontak">Kontak</a></li>
+                    <li><a href="#">Keranjang</a></li>
+                    <li><a href="#">Kontak</a></li>
                 </ul>
             </nav>
-            <div class="header-icons">
-                <a href="#"><i class="fas fa-search"></i></a>
-                <a href="#"><i class="fas fa-user"></i></a>
-                <a href="#"><i class="fas fa-shopping-cart"></i></a>
+            <div class="menu-icon">
+                <i class="fas fa-bars"></i>
             </div>
         </div>
     </header>
 
-    <!-- Hero Banner -->
-    <section class="hero-banner">
-        <div class="banner-content">
-            <h2>Selamat Datang di Toko Jihan</h2>
-            <p>Dapatkan sembako berkualitas dengan harga terbaik!</p>
-            <a href="#produk" class="cta-button">Belanja Sekarang</a>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2>Milk Shake</h2>
+            <p>Menampilkan semua hasil</p>
         </div>
     </section>
 
-    <!-- Kategori Produk -->
-    <section class="categories" id="kategori">
-        <div class="container">
-            <h2>Kategori Produk</h2>
-            <div class="category-grid">
-                <div class="category-item">
-                    <img src="beras.jpg" alt="Beras">
-                    <h3>Beras</h3>
-                </div>
-                <div class="category-item">
-                    <img src="gula.jpg" alt="Gula">
-                    <h3>Gula</h3>
-                </div>
-                <div class="category-item">
-                    <img src="minyak.jpg" alt="Minyak Goreng">
-                    <h3>Minyak Goreng</h3>
-                </div>
-                <div class="category-item">
-                    <img src="telur.jpg" alt="Telur">
-                    <h3>Telur</h3>
-                </div>
+    <!-- Produk Section -->
+    <section class="produk">
+        <div class="container produk-grid">
+            <!-- Produk Item -->
+            <div class="produk-item">
+                <img src="img/yogurt.jpg" alt="Yogurt Strawberry">
+                <h3>Yogurt Strawberry</h3>
+                <p>Rp 21.000</p>
+                <button class="btn">Tambah ke Keranjang</button>
+            </div>
+            <div class="produk-item">
+                <img src="img/granola.jpg" alt="Banana Granola">
+                <h3>Banana Granola</h3>
+                <p>Rp 27.000</p>
+                <button class="btn">Tambah ke Keranjang</button>
+            </div>
+            <div class="produk-item">
+                <img src="img/coklat.jpg" alt="Coklat Puff Smoothie">
+                <h3>Coklat Puff Smoothie</h3>
+                <p>Rp 25.000</p>
+                <button class="btn">Tambah ke Keranjang</button>
+            </div>
+            <div class="produk-item">
+                <img src="img/melon.jpg" alt="Banana Melon Smoothie">
+                <h3>Banana Melon Smoothie</h3>
+                <p>Rp 31.000</p>
+                <button class="btn">Tambah ke Keranjang</button>
             </div>
         </div>
     </section>
@@ -68,15 +71,13 @@
     <!-- Footer -->
     <footer>
         <div class="container footer-container">
-            <p>&copy; 2024 Toko Jihan - Semua Hak Dilindungi</p>
-            <ul class="social-links">
-                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-            </ul>
+            <p>&copy; 2024 Toko Jihan. All Rights Reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
         </div>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
