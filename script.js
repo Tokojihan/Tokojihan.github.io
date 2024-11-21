@@ -136,3 +136,26 @@ produkItems.forEach(produk => {
             alert(`${productName} telah ditambahkan ke keranjang dengan harga ${productPrice}`);
         });
     });
+    function tambahProduk(nama, harga, gambar) {
+        const produkContainer = document.querySelector('#produk-list'); // Kontainer untuk produk
+
+        const produkBaru = document.createElement('div');
+        produkBaru.classList.add('produk-item');
+        produkBaru.innerHTML = `
+            <img src="${gambar}" alt="${nama}">
+            <h3>${nama}</h3>
+            <p>Harga per satuan: <span class="unit-price">${harga}</span></p>
+            <p>Total Harga: Rp <span class="total-price">${harga}</span></p>
+            <div class="quantity-control">
+                <button class="minus">-</button>
+                <input type="number" value="1" class="quantity" min="1">
+                <button class="plus">+</button>
+            </div>
+            <button class="btn add-to-cart">Tambah ke Keranjang</button>
+        `;
+        produkContainer.appendChild(produkBaru);
+        updateTotalPrice(produkContainer.children.length - 1); // Update harga total setelah menambah produk baru
+    }
+
+    // Contoh menambahkan produk
+    tambahProduk('Minyak Goreng', 30000, 'minyak.jpg');
