@@ -146,29 +146,80 @@ footer .social-links a {
     margin: 0 5px;
 }
 
-/* Hamburger Menu */
-.menu-icon {
-    display: block;
-    cursor: pointer;
+/* General Styles for Navbar */
+.navbar {
+    background-color: #ff4747;
+    color: white;
+    padding: 15px 0;
+    position: relative;
+    z-index: 10;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo h1 {
     font-size: 24px;
+    margin: 0;
+}
+
+.navbar nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar nav ul li {
+    margin-right: 20px;
+}
+
+.navbar nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+/* Hide Menu on Mobile */
+.navbar .menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
     color: white;
 }
 
-nav ul {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 10px;
-    background: #ff4747;
-    border-radius: 8px;
-    padding: 10px;
-}
-
-nav ul.show {
+.nav-links {
     display: flex;
 }
 
-nav ul li {
-    margin: 10px 0;
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #ff4747;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        border-radius: 0 0 8px 8px;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .navbar .menu-icon {
+        display: block;
+    }
+
+    .navbar nav ul li {
+        margin: 10px 0;
+    }
 }
+

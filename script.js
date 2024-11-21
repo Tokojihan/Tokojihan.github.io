@@ -39,10 +39,11 @@ document.querySelectorAll('.add-to-cart').forEach((btn, index) => {
     });
 });
 
-// 3. Fitur Hamburger Menu (Mobile Navigation)
+// Pilih elemen burger menu dan navigasi
 const menuIcon = document.querySelector('.menu-icon');
-const navMenu = document.querySelector('nav ul');
+const navLinks = document.querySelector('.nav-links');
 
+// Tambahkan event listener untuk toggle class "show"
 menuIcon.addEventListener('click', () => {
-    navMenu.classList.toggle('show');
+    navLinks.classList.toggle('show');
 });
