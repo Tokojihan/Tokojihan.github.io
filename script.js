@@ -1,5 +1,5 @@
-// Responsive menu toggle
-const nav = document.querySelector('header nav ul');
-document.querySelector('header').addEventListener('click', () => {
+// Toggle menu for mobile devices
+const nav = document.querySelector('nav ul');
+document.querySelector('.header-icons').addEventListener('click', () => {
     nav.classList.toggle('active');
 });
