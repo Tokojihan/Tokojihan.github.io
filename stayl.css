@@ -1,140 +1,120 @@
-/* Reset dasar */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Tampilan umum */
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-}
-
-/* Header */
-header {
-    background-color: #4CAF50;
-    color: white;
-    text-align: center;
-    padding: 1rem 0;
-}
-
-header h1 {
     margin: 0;
+    font-family: Arial, sans-serif;
 }
 
-nav ul {
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background-color: #e84242;
+    color: white;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header nav ul {
     list-style: none;
+    display: flex;
+    margin: 0;
     padding: 0;
 }
 
-nav ul li {
-    display: inline;
-    margin-right: 20px;
+header nav ul li {
+    margin: 0 15px;
 }
 
-nav ul li a {
-    color: white;
+header nav ul li a {
     text-decoration: none;
+    color: white;
+    font-weight: bold;
 }
 
-/* Home section */
-#home {
-    text-align: center;
-    padding: 2rem;
+/* Hero Section with Slider */
+.hero {
+    position: relative;
+    height: 70vh;
+    overflow: hidden;
 }
 
-#home h2 {
-    font-size: 2rem;
-    color: #333;
+.slider {
+    display: flex;
+    animation: slide 12s infinite;
+    width: 300%;
 }
 
-#home p {
-    font-size: 1.2rem;
-    color: #555;
+.slide {
+    flex: 1;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
-/* Produk Section */
-#produk {
-    padding: 2rem;
-    background-color: #ffffff;
+@keyframes slide {
+    0%, 33.33% { transform: translateX(0); }
+    33.34%, 66.66% { transform: translateX(-100%); }
+    66.67%, 100% { transform: translateX(-200%); }
 }
 
-#produk h2 {
-    text-align: center;
-    margin-bottom: 1rem;
-}
-
-.produk-container {
+/* Features Section */
+.features {
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.produk {
-    background-color: #f9f9f9;
-    padding: 1rem;
-    margin: 1rem;
+    padding: 50px 20px;
+    background-color: #f4f4f4;
     text-align: center;
-    width: 30%;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.produk img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    margin-bottom: 1rem;
+.feature {
+    flex: 1;
+    max-width: 300px;
+    margin: 0 10px;
+    animation: fadeIn 2s;
 }
 
-.produk h3 {
-    font-size: 1.5rem;
-    color: #333;
+.feature i {
+    font-size: 40px;
+    color: #e84242;
+    margin-bottom: 15px;
 }
 
-.produk p {
-    font-size: 1.2rem;
-    color: #555;
-}
-
-.tombol-beli {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 1rem;
-    transition: background-color 0.3s;
-}
-
-.tombol-beli:hover {
-    background-color: #45a049;
-}
-
-/* Kontak Section */
-#kontak {
-    text-align: center;
-    padding: 2rem;
-    background-color: #fff;
-}
-
-#kontak h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-#kontak p {
-    font-size: 1.2rem;
-    color: #555;
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* Footer */
 footer {
     text-align: center;
-    padding: 1rem;
+    padding: 20px;
     background-color: #333;
     color: white;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        display: none;
+    }
+
+    header nav ul.active {
+        display: flex;
+    }
+
+    .features {
+        flex-direction: column;
+    }
 }
