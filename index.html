@@ -1,68 +1,58 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toko Sembako</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Responsive Website with Slider</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
-        <h1>Toko Sembako</h1>
+        <div class="logo">MyWebsite</div>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#produk">Produk</a></li>
-                <li><a href="#kontak">Kontak</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="home">
-        <h2>Selamat datang di Toko Sembako Kami!</h2>
-        <p>Temukan berbagai kebutuhan sehari-hari di sini dengan harga terjangkau!</p>
-    </section>
-
-    <section id="produk">
-        <h2>Produk Kami</h2>
-        <div class="produk-container">
-            <div class="produk">
-                <img src="Gula-pasir.png" alt="Gula Pasir" width="150" height="150">
-                <h3>Gula Pasir</h3>
-                <p>Harga: Rp 15,000</p>
-                <button class="tombol-beli">Beli</button>
+    <section class="hero">
+        <div class="slider">
+            <div class="slide" style="background-image: url('slide1.jpg');">
+                <h1>Slide 1</h1>
             </div>
-            <div class="produk">
-                <img src="Beras.png" alt="Beras" width="150" height="150">
-                <h3>Beras 5kg</h3>
-                <p>Harga: Rp 80,000</p>
-                <button class="tombol-beli">Beli</button>
+            <div class="slide" style="background-image: url('slide2.jpg');">
+                <h1>Slide 2</h1>
             </div>
-            <div class="produk">
-                <img src="Minyak-Goreng.jpg" alt="Minyak Goreng" width="150" height="150">
-                <h3>Minyak Goreng 1L</h3>
-                <p>Harga: Rp 18,000</p>
-                <button class="tombol-beli">Beli</button>
+            <div class="slide" style="background-image: url('slide3.jpg');">
+                <h1>Slide 3</h1>
             </div>
-        </div>
-        <div class="produk">
-            <img src="Telor.jpg" alt="Telor" width="150" height="150">
-            <h4>Telor 1kg</h4>
-            <p>Harga: RP 20.000</p>
-            <button class="tombol-beli">Beli</button>
-        </div>
         </div>
     </section>
 
-    <section id="kontak">
-        <h2>Kontak Kami</h2>
-        <p>Untuk informasi lebih lanjut, hubungi kami di:</p>
-        <p>Email: toko@sembako.com</p>
-        <p>Telepon: 08123456789</p>
+    <section class="features">
+        <div class="feature">
+            <i class="fas fa-hamburger"></i>
+            <h3>Burger</h3>
+            <p>Delicious burgers made fresh daily.</p>
+        </div>
+        <div class="feature">
+            <i class="fas fa-pizza-slice"></i>
+            <h3>Pizza</h3>
+            <p>Tasty pizzas with the best toppings.</p>
+        </div>
+        <div class="feature">
+            <i class="fas fa-coffee"></i>
+            <h3>Coffee</h3>
+            <p>Freshly brewed coffee to start your day.</p>
+        </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 Toko Sembako - Semua hak cipta dilindungi</p>
+        <p>&copy; 2024 MyWebsite. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
