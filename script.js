@@ -47,3 +47,45 @@ const navLinks = document.querySelector('.nav-links');
 menuIcon.addEventListener('click', () => {
     navLinks.classList.toggle('show');
 });
+// Pilih semua produk
+const produkItems = document.querySelectorAll('.produk-item');
+
+produkItems.forEach(produk => {
+    const minusButton = produk.querySelector('.minus');
+    const plusButton = produk.querySelector('.plus');
+    const quantityInput = produk.querySelector('.quantity');
+    const unitPriceElement = produk.querySelector('.unit-price');
+    const totalPriceElement = produk.querySelector('.total-price');
+
+    // Ambil harga per satuan
+    const unitPrice = parseInt(unitPriceElement.textContent);
+
+    // Fungsi untuk memperbarui total harga
+    const updateTotalPrice = () => {
+        const quantity = parseInt(quantityInput.value);
+        const totalPrice = unitPrice * quantity;
+        totalPriceElement.textContent = totalPrice.toLocaleString(); // Format angka
+    };
+
+    // Event listener tombol minus
+    minusButton.addEventListener('click', () => {
+        if (quantityInput.value > 1) {
+            quantityInput.value = parseInt(quantityInput.value) - 1;
+            updateTotalPrice();
+        }
+    });
+
+    // Event listener tombol plus
+    plusButton.addEventListener('click', () => {
+        quantityInput.value = parseInt(quantityInput.value) + 1;
+        updateTotalPrice();
+    });
+
+    // Event listener perubahan input jumlah secara manual
+    quantityInput.addEventListener('input', () => {
+        if (quantityInput.value < 1) {
+            quantityInput.value = 1; // Minimal 1
+        }
+        updateTotalPrice();
+    });
+});
