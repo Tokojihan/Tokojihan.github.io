@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toko Jihan</title>
+    <meta name="description" content="Toko Jihan - Your go-to grocery store for quality food and essentials.">
+    <meta name="keywords" content="Toko Jihan, grocery store, online store, food, essentials">
+    <title>Toko Jihan - Online Grocery Store</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -15,7 +17,17 @@
                 <img src="logo.png" alt="Toko Jihan Logo" />
             </div>
             <nav>
-                <ul>
+                <ul class="desktop-nav">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Produk</a></li>
+                    <li><a href="#">Kategori</a></li>
+                    <li><a href="#maps">Lokasi</a></li>
+                </ul>
+                <!-- Hamburger Menu -->
+                <div class="hamburger-menu" id="hamburger-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="mobile-nav" id="mobile-nav">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Produk</a></li>
                     <li><a href="#">Kategori</a></li>
@@ -44,16 +56,16 @@
         <h2>Kategori Populer</h2>
         <div class="category-grid">
             <div class="category-item">
-                <img src="Beras.png" alt="Burger">
-                <h3>Burger</h3>
+                <img src="Beras.png" alt="Beras">
+                <h3>Beras</h3>
             </div>
             <div class="category-item">
-                <img src="Gula-pasir.png" alt="Chicken">
-                <h3>Chicken</h3>
+                <img src="Gula-pasir.png" alt="Gula Pasir">
+                <h3>Gula Pasir</h3>
             </div>
             <div class="category-item">
-                <img src="Minyak-Goreng.jpg" alt="Pizza">
-                <h3>Pizza</h3>
+                <img src="Minyak-Goreng.jpg" alt="Minyak Goreng">
+                <h3>Minyak Goreng</h3>
             </div>
         </div>
     </section>

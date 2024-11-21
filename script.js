@@ -1,5 +1,7 @@
-// Toggle menu for mobile devices
-const nav = document.querySelector('nav ul');
-document.querySelector('.header-icons').addEventListener('click', () => {
-    nav.classList.toggle('active');
+// JavaScript for hamburger menu toggle
+const hamburgerMenu = document.getElementById("hamburger-menu");
+const mobileNav = document.getElementById("mobile-nav");
+
+hamburgerMenu.addEventListener("click", () => {
+    mobileNav.classList.toggle("mobile-nav-visible");
 });

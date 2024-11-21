@@ -1,14 +1,20 @@
-/* General Styles */
-body {
+/* Global Styles */
+body, html {
     margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
 }
 
 /* Header */
 header {
-    background: #e84242;
-    padding: 10px 20px;
+    background-color: #333;
     color: white;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
 .header-container {
@@ -18,114 +24,125 @@ header {
 }
 
 .logo img {
-    height: 50px;
+    max-width: 150px;
 }
 
-nav ul {
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.desktop-nav {
     list-style: none;
     display: flex;
     margin: 0;
-    padding: 0;
 }
 
-nav ul li {
-    margin: 0 15px;
+.desktop-nav li {
+    margin-left: 20px;
 }
 
-nav ul li a {
-    text-decoration: none;
+.desktop-nav a {
     color: white;
-    font-weight: bold;
+    text-decoration: none;
+}
+
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
 }
 
 .header-icons a {
-    margin: 0 10px;
     color: white;
-    font-size: 20px;
+    margin-left: 15px;
+    text-decoration: none;
 }
 
 /* Hero Slider */
 .hero-slider {
-    position: relative;
+    margin-top: 100px;
     overflow: hidden;
-    height: 400px;
 }
 
 .slider {
     display: flex;
-    animation: slide 12s infinite;
-    width: 300%;
+    transition: transform 0.5s ease;
 }
 
 .slide {
-    flex: 1;
-    height: 100%;
+    width: 100%;
+    height: 400px;
     background-size: cover;
     background-position: center;
 }
 
 /* Categories */
 .categories {
-    padding: 20px;
+    padding: 50px 20px;
     text-align: center;
 }
 
 .category-grid {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-}
-
-.category-item {
-    text-align: center;
-    width: 150px;
 }
 
 .category-item img {
     width: 100%;
-    border-radius: 10px;
+    height: 200px;
+    object-fit: cover;
 }
 
-/* Google Maps */
+.category-item h3 {
+    margin-top: 10px;
+}
+
+/* Maps Section */
 .maps-section {
-    padding: 20px;
+    padding: 50px 20px;
     text-align: center;
-    background: #f9f9f9;
-}
-
-.maps-section h2 {
-    margin-bottom: 20px;
-    color: #e84242;
 }
 
 /* Footer */
 footer {
-    text-align: center;
-    padding: 10px;
-    background: #333;
+    background-color: #333;
     color: white;
-    font-size: 14px;
+    text-align: center;
+    padding: 20px;
 }
 
-/* Animasi Slider */
-@keyframes slide {
-    0%, 33.33% { transform: translateX(0); }
-    33.34%, 66.66% { transform: translateX(-100%); }
-    66.67%, 100% { transform: translateX(-200%); }
-}
-
-/* Responsiveness */
+/* Mobile Styles */
 @media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
+    .desktop-nav {
         display: none;
     }
 
-    nav ul.active {
-        display: flex;
+    .hamburger-menu {
+        display: block;
+        font-size: 30px;
+    }
+
+    .mobile-nav {
+        display: none;
+        list-style: none;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #333;
+        padding: 10px;
+    }
+
+    .mobile-nav li {
+        margin-bottom: 10px;
+    }
+
+    .mobile-nav a {
+        color: white;
+        text-decoration: none;
     }
 
     .category-grid {
-        flex-direction: column;
+        grid-template-columns: 1fr 1fr;
     }
 }
