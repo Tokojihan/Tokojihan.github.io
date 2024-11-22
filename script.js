@@ -133,9 +133,11 @@ produkItems.forEach(produk => {
         totalPrices[index].innerText = 'Rp ' + totalPrice.toLocaleString();
     }
 
-    //alert() replacement
-Swal.fire({
-    icon: "error",  //success,warning,info,question
-    title: "Testing",
-    text: "Hi, from JSCroot",
-  });
+   // Menambahkan produk ke keranjang
+   addButtons.forEach((button, index) => {
+    button.addEventListener('click', () => {
+        const productName = document.querySelectorAll('.produk-item h3')[index].innerText;
+        const productPrice = totalPrices[index].innerText;
+        alert(${productName} telah ditambahkan ke keranjang dengan harga ${productPrice});
+    });
+});
