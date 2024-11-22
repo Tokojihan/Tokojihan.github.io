@@ -136,20 +136,62 @@
     });
 
     // Fungsi untuk memperbarui harga total berdasarkan jumlah
-    function updateTotalPrice(index) {
-        const quantity = parseInt(quantities[index].value);
-        const unitPrice = parseInt(unitPrices[index].innerText.replace('Rp', '').replace('.', ''));
-        const totalPrice = quantity * unitPrice;
-        totalPrices[index].innerText = 'Rp ' + totalPrice.toLocaleString();
-    }
+function updateTotalPrice(index) {
+    const quantity = parseInt(quantities[index].value);
+    const unitPrice = parseInt(unitPrices[index].textContent.replace('Rp', '').replace('.', '')); // Pastikan ini benar
+    const totalPrice = quantity * unitPrice;
+
+    // Perbarui teks harga total dengan format angka
+    totalPrices[index].textContent = totalPrice.toLocaleString();
+}
+
+// Menambah jumlah produk
+plusButtons.forEach((button, index) => {
+    button.addEventListener('click', () => {
+        const quantityInput = quantities[index];
+        let quantity = parseInt(quantityInput.value);
+        quantityInput.value = quantity + 1;
+
+        // Perbarui harga total
+        updateTotalPrice(index);
+    });
+});
+
+// Mengurangi jumlah produk
+minusButtons.forEach((button, index) => {
+    button.addEventListener('click', () => {
+        const quantityInput = quantities[index];
+        let quantity = parseInt(quantityInput.value);
+        if (quantity > 1) {
+            quantityInput.value = quantity - 1;
+        }
+
+        // Perbarui harga total
+        updateTotalPrice(index);
+    });
+});
+
 
     // Menambahkan produk ke keranjang
-    addButtons.forEach((button, index) => {
-        button.addEventListener('click', () => {
-            const productName = document.querySelectorAll('.produk-item h3')[index].innerText;
-            const productPrice = totalPrices[index].innerText;
-            alert(`${productName} telah ditambahkan ke keranjang dengan harga ${productPrice}`);
-        });
+addButtons.forEach((button, index) => {
+    button.addEventListener('click', () => {
+        const productName = document.querySelectorAll('.produk-item h3')[index].textContent;
+        const productPrice = totalPrices[index].textContent; // Ambil harga yang sudah diperbarui
+        const quantity = quantities[index].value;
+
+        // Simpan data ke keranjang
+        const item = {
+            name: productName,
+            price: productPrice,
+            quantity: parseInt(quantity),
+        };
+        cart.push(item);
+
+        // Beri notifikasi
+        alert(`${productName} berhasil ditambahkan ke keranjang dengan harga total ${productPrice}`);
+        console.log(cart); // Untuk debugging
     });
+});
+
 </script>
 
