@@ -1,4 +1,3 @@
-
 // Script untuk fitur interaktif
 
 // 1. Fitur Tombol Tambah/Kurang Jumlah Produk
@@ -129,11 +128,11 @@ produkItems.forEach(produk => {
         totalPrices[index].innerText = 'Rp ' + totalPrice.toLocaleString();
     }
 
-   // Menambahkan produk ke keranjang
-   addButtons.forEach((button, index) => {
-    button.addEventListener('click', () => {
-        const productName = document.querySelectorAll('.produk-item h3')[index].innerText;
-        const productPrice = totalPrices[index].innerText;
-        alert(${productName} telah ditambahkan ke keranjang dengan harga ${productPrice});
+    // Menambahkan produk ke keranjang
+    addButtons.forEach((button, index) => {
+        button.addEventListener('click', () => {
+            const productName = document.querySelectorAll('.produk-item h3')[index].innerText;
+            const productPrice = totalPrices[index].innerText;
+            alert(`${productName} telah ditambahkan ke keranjang dengan harga ${productPrice}`);
+        });
     });
-});
