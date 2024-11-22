@@ -1,197 +1,41 @@
 <link rel="stylesheet" href="produk.css">
 
-<div class="produk-container">
-    <div class="produk-item">
-        <img src="beras.jpg" alt="Beras">
-        <h3>Beras</h3>
-        <p>Harga per satuan: <span class="unit-price">21000</span></p>
-        <p>Total Harga: Rp <span class="total-price">21000</span></p>
-        <div class="quantity-control">
-            <button class="minus">-</button>
-            <input type="number" value="1" class="quantity" min="1">
-            <button class="plus">+</button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produk</title>
+    <link rel="stylesheet" href="produk.css">
+</head>
+<body>
+    <div class="produk-container">
+        <div class="produk-item">
+            <img src="beras.jpg" alt="Beras">
+            <h3>Beras</h3>
+            <p>Harga per satuan: <span class="unit-price">21000</span></p>
+            <p>Total Harga: Rp <span class="total-price">21000</span></p>
+            <div class="quantity-control">
+                <button class="minus">-</button>
+                <input type="number" value="1" class="quantity" min="1">
+                <button class="plus">+</button>
+            </div>
+            <button class="btn add-to-cart">Tambah ke Keranjang</button>
         </div>
-        <button class="btn add-to-cart">Tambah ke Keranjang</button>
-    </div>
-    <div class="produk-item">
-        <img src="gula.jpg" alt="Gula">
-        <h3>Gula</h3>
-        <p>Harga per satuan: <span class="unit-price">15500</span></p>
-        <p>Total Harga: RP <span class="total-price">15500</span></p>
-        <div class="quantity-control">
-            <button class="minus">-</button>
-            <input type="number" value="1" class="quantity" min="1">
-            <button class="plus">+</button>
+        <div class="produk-item">
+            <img src="gula.jpg" alt="Gula">
+            <h3>Gula</h3>
+            <p>Harga per satuan: <span class="unit-price">15500</span></p>
+            <p>Total Harga: Rp <span class="total-price">15500</span></p>
+            <div class="quantity-control">
+                <button class="minus">-</button>
+                <input type="number" value="1" class="quantity" min="1">
+                <button class="plus">+</button>
+            </div>
+            <button class="btn add-to-cart">Tambah ke Keranjang</button>
         </div>
-        <button class="btn add-to-cart">Tambah ke Keranjang</button>
+        <!-- Tambahkan produk lain sesuai kebutuhan -->
     </div>
-    <div class="produk-item">
-        <img src="minyak.jpg" alt="Minyak">
-        <h3>Minyak</h3>
-        <p>Harga per satuan: <span class="unit-price">31000</span></p>
-        <p>Total Harga: RP <span class="total-price">31000</span></p>
-        <div class="quantity-control">
-            <button class="minus">-</button>
-            <input type="number" value="1" class="quantity" min="1">
-            <button class="plus">+</button>
-        </div>
-        <button class="btn add-to-cart">Tambah ke Keranjang</button>
-    </div>
-    <div class="produk-item" id="produk5">
-        <img src="kopi.jpg" alt="Kopi">
-        <h3>Kopi</h3>
-        <p>Harga per satuan: <span class="unit-price">10000</span></p>
-        <p>Total Harga: Rp <span class="total-price">10000</span></p>
-        <div class="quantity-control">
-            <button class="minus">-</button>
-            <input type="number" value="1" class="quantity" min="1">
-            <button class="plus">+</button>
-        </div>
-        <button class="btn add-to-cart">Tambah ke Keranjang</button>
-    </div>
-
-    <div class="produk-item" id="produk4">
-        <img src="mie.jpg" alt="Indomie">
-        <h3>Indomie</h3>
-        <p>Harga per satuan: <span class="unit-price">3000</span></p>
-        <p>Total Harga: Rp <span class="total-price">3000</span></p>
-        <div class="quantity-control">
-            <button class="minus">-</button>
-            <input type="number" value="1" class="quantity" min="1">
-            <button class="plus">+</button>
-        </div>
-        <button class="btn add-to-cart">Tambah ke Keranjang</button>
-    </div>
-
-    <div class="produk-item" id="produk3">
-        <img src="susu.jpg" alt="susu fresenfleg">
-        <h3>Susu</h3>
-        <p>Harga per satuan: <span class="unit-price">15000</span></p>
-        <p>Total Harga: Rp <span class="total-price">15000</span></p>
-        <div class="quantity-control">
-            <button class="minus">-</button>
-            <input type="number" value="1" class="quantity" min="1">
-            <button class="plus">+</button>
-        </div>
-        <button class="btn add-to-cart">Tambah ke Keranjang</button>
-    </div>
-
-    <div class="produk-item" id="produk2">
-        <img src="terigu.jpg" alt="Terigu">
-        <h3>Terigu</h3>
-        <p>Harga per satuan: <span class="unit-price">8000</span></p>
-        <p>Total Harga: Rp <span class="total-price">8000</span></p>
-        <div class="quantity-control">
-            <button class="minus">-</button>
-            <input type="number" value="1" class="quantity" min="1">
-            <button class="plus">+</button>
-        </div>
-        <button class="btn add-to-cart">Tambah ke Keranjang</button>
-    </div>
-
-    <div class="produk-item" id="produk1">
-        <img src="telur.jpg" alt="Telur">
-        <h3>Telur</h3>
-        <p>Harga per satuan: <span class="unit-price">21000</span></p>
-        <p>Total Harga: Rp <span class="total-price">21000</span></p>
-        <div class="quantity-control">
-            <button class="minus">-</button>
-            <input type="number" value="1" class="quantity" min="1">
-            <button class="plus">+</button>
-        </div>
-        <button class="btn add-to-cart">Tambah ke Keranjang</button>
-    </div>
-</div>
-
-
-<script>
-    // Ambil elemen yang diperlukan
-    const addButtons = document.querySelectorAll('.add-to-cart');
-    const minusButtons = document.querySelectorAll('.minus');
-    const plusButtons = document.querySelectorAll('.plus');
-    const quantities = document.querySelectorAll('.quantity');
-    const totalPrices = document.querySelectorAll('.total-price');
-    const unitPrices = document.querySelectorAll('.unit-price');
-
-    // Menambah jumlah produk
-    plusButtons.forEach((button, index) => {
-        button.addEventListener('click', () => {
-            const quantityInput = quantities[index];
-            let quantity = parseInt(quantityInput.value);
-            quantityInput.value = quantity + 1;
-            updateTotalPrice(index);
-        });
-    });
-
-    // Mengurangi jumlah produk
-    minusButtons.forEach((button, index) => {
-        button.addEventListener('click', () => {
-            const quantityInput = quantities[index];
-            let quantity = parseInt(quantityInput.value);
-            if (quantity > 1) {
-                quantityInput.value = quantity - 1;
-            }
-            updateTotalPrice(index);
-        });
-    });
-
-    // Fungsi untuk memperbarui harga total berdasarkan jumlah
-function updateTotalPrice(index) {
-    const quantity = parseInt(quantities[index].value);
-    const unitPrice = parseInt(unitPrices[index].textContent.replace('Rp', '').replace('.', '')); // Pastikan ini benar
-    const totalPrice = quantity * unitPrice;
-
-    // Perbarui teks harga total dengan format angka
-    totalPrices[index].textContent = totalPrice.toLocaleString();
-}
-
-// Menambah jumlah produk
-plusButtons.forEach((button, index) => {
-    button.addEventListener('click', () => {
-        const quantityInput = quantities[index];
-        let quantity = parseInt(quantityInput.value);
-        quantityInput.value = quantity + 1;
-
-        // Perbarui harga total
-        updateTotalPrice(index);
-    });
-});
-
-// Mengurangi jumlah produk
-minusButtons.forEach((button, index) => {
-    button.addEventListener('click', () => {
-        const quantityInput = quantities[index];
-        let quantity = parseInt(quantityInput.value);
-        if (quantity > 1) {
-            quantityInput.value = quantity - 1;
-        }
-
-        // Perbarui harga total
-        updateTotalPrice(index);
-    });
-});
-
-
-    // Menambahkan produk ke keranjang
-addButtons.forEach((button, index) => {
-    button.addEventListener('click', () => {
-        const productName = document.querySelectorAll('.produk-item h3')[index].textContent;
-        const productPrice = totalPrices[index].textContent; // Ambil harga yang sudah diperbarui
-        const quantity = quantities[index].value;
-
-        // Simpan data ke keranjang
-        const item = {
-            name: productName,
-            price: productPrice,
-            quantity: parseInt(quantity),
-        };
-        cart.push(item);
-
-        // Beri notifikasi
-        alert(`${productName} berhasil ditambahkan ke keranjang dengan harga total ${productPrice}`);
-        console.log(cart); // Untuk debugging
-    });
-});
-
-</script>
-
+    <script src="produk.js"></script>
+</body>
+</html>
