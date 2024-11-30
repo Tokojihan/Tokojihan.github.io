@@ -177,3 +177,72 @@ addButtons.forEach((button, index) => {
         console.log(cart); // Untuk debugging
     });
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const cart = [];
+    const cartContainer = document.createElement('div');
+    cartContainer.classList.add('cart-container');
+    document.body.appendChild(cartContainer);
+
+    const updateCartUI = () => {
+        cartContainer.innerHTML = '<h3>Keranjang Belanja</h3>';
+        if (cart.length === 0) {
+            cartContainer.innerHTML += '<p>Keranjang kosong</p>';
+            return;
+        }
+
+        cart.forEach((item, index) => {
+            const cartItem = document.createElement('div');
+            cartItem.classList.add('cart-item');
+            cartItem.innerHTML = `
+                <p>${item.name} (x${item.quantity})</p>
+                <p>Total: Rp ${item.quantity * item.price}</p>
+                <button class="remove" data-index="${index}">Hapus</button>
+            `;
+            cartContainer.appendChild(cartItem);
+        });
+
+        const totalPrice = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+        cartContainer.innerHTML += `<p><strong>Total Keseluruhan: Rp ${totalPrice}</strong></p>`;
+    };
+
+    const addToCart = (name, price, quantity) => {
+        const existingItem = cart.find(item => item.name === name);
+        if (existingItem) {
+            existingItem.quantity += quantity;
+        } else {
+            cart.push({ name, price, quantity });
+        }
+        updateCartUI();
+    };
+
+    const removeFromCart = (index) => {
+        cart.splice(index, 1);
+        updateCartUI();
+    };
+
+    document.querySelectorAll('.produk-item').forEach(item => {
+        const addButton = item.querySelector('.add-to-cart');
+        const quantityInput = item.querySelector('.quantity');
+        const productName = item.querySelector('h3').textContent;
+        const productPrice = parseInt(item.querySelector('.unit-price').textContent, 10);
+
+        addButton.addEventListener('click', () => {
+            const quantity = parseInt(quantityInput.value, 10);
+            if (quantity > 0) {
+                addToCart(productName, productPrice, quantity);
+                alert(`${quantity} ${productName} berhasil ditambahkan ke keranjang!`);
+            } else {
+                alert('Jumlah harus lebih dari 0!');
+            }
+        });
+    });
+
+    cartContainer.addEventListener('click', (event) => {
+        if (event.target.classList.contains('remove')) {
+            const index = parseInt(event.target.dataset.index, 10);
+            removeFromCart(index);
+        }
+    });
+});

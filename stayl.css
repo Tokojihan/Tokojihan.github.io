@@ -156,3 +156,47 @@ footer .social-links a {
         flex: 1 1 100%; /* Lebar penuh untuk layar ponsel */
     }
 }
+ 
+
+.cart-container {
+    position: fixed;
+    right: 20px;
+    top: 80px;
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 300px;
+    max-height: 400px;
+    overflow-y: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.cart-container h3 {
+    margin-top: 0;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.cart-item p {
+    margin: 0;
+}
+
+.cart-item .remove {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.cart-item .remove:hover {
+    background: #c0392b;
+}
